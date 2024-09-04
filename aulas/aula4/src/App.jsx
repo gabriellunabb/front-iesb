@@ -1,11 +1,7 @@
-import Logo from "./components/Logo";
+import Login from "./pages/Login";
 
 function App() {
-    return (
-        <>
-            <Logo imagem="https://svgrepo.com/show/489120/school.svg" />
-        </>
-    );
+    return <Login />;
 }
 
 export default App;
