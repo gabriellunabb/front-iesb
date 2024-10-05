@@ -1,7 +1,8 @@
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 import InputEmail from "../components/InputEmail";
-import InputSenha from "../components/InputSenha";
 import InputNome from "../components/InputNome";
+import InputSenha from "../components/InputSenha";
 
 export default function FormPerfil() {
     const {
@@ -10,11 +11,13 @@ export default function FormPerfil() {
         formState: { errors },
     } = useForm();
 
+    const navigate = useNavigate();
+
     return (
         <>
             <form
                 onSubmit={handleSubmit((data) => {
-                    console.log(data);
+                    navigate("/perfil");
                 })}
             >
                 <InputNome register={register} error={errors.nome} />
